@@ -1,0 +1,29 @@
+{
+  "name": "<%= appNameSlug %>",
+  "version": "0.1.0",
+  "main": [
+    "dist/<%= appNameSlug %>.js"
+  ],
+  "ignore": [
+    ".bowerrc",
+    ".jshintrc",
+    "node_modules",
+    "libs",
+    "gulpfile.js",
+    "karma.conf.js",
+    "index.html",
+    "package.json",
+    "templates",
+    "<%= appNameSlug %>.js",
+    "!dist/<%= appNameSlug %>.js",
+    "test"
+  ],
+  "dependencies": {
+    "hawtio-core": "~2.0.0",
+    "hawtio-core-navigation": "~2.0.0"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.1",
+    "patternfly": "~1.1.2"
+  }
+}
