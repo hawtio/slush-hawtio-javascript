@@ -47,7 +47,7 @@ gulp.task('connect', function() {
   plugins.watch([config.src, config.templates], function() {
     gulp.start('build');
   });
-  plugins.watch(['index.html', 'dist/' + config.js], function() {
+  plugins.watch(['libs/**/*.js', 'libs/**/*.css', 'index.html', 'dist/' + config.js], function() {
     gulp.start('reload');
   });
   plugins.connect.server({
