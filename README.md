@@ -15,13 +15,13 @@ $ npm install -g slush-hawtio-javascript
 Create a new folder for your project:
 
 ```bash
-$ mkdir my-slush-hawtio-javascript
+$ mkdir my-awesome-plugin
 ```
 
 Run the generator from within the new folder:
 
 ```bash
-$ cd my-slush-hawtio-javascript && slush slush-hawtio-javascript
+$ cd my-awesome-plugin && slush hawtio-javascript
 ```
 
 ## Getting To Know Slush
