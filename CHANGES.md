@@ -1,5 +1,8 @@
 ## Change Log
 
+#### 0.1.3
+* Update index.html to use view controller
+
 #### 0.1.2
 * Fix npe
 
