@@ -1,7 +1,7 @@
 {
   "name": "slush-hawtio-javascript",
   "description": "Generator for a hawtio plugin in javascript",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/hawtio/slush-hawtio-javascript",
   "author": {
     "name": "Stan Lewis",
