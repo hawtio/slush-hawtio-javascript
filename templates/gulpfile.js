@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     gulpLoadPlugins = require('gulp-load-plugins'),
-    uri = require('URIjs'),
+    uri = require('urijs'),
+    del = require('del'),
     s = require('underscore.string'),
     hawtio = require('hawtio-node-backend');
 
