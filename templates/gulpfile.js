@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     gulpLoadPlugins = require('gulp-load-plugins'),
-    uri = require('URIjs'),
+    uri = require('urijs'),
+    del = require('del'),
     s = require('underscore.string'),
     hawtio = require('hawtio-node-backend');
 
@@ -42,8 +43,7 @@ gulp.task('concat', ['templates'], function() {
 });
 
 gulp.task('clean', ['concat'], function() {
-  return gulp.src('./templates.js', { read: false })
-    .pipe(plugins.clean());
+  return del('./templates.js');
 });
 
 gulp.task('connect', function() {
@@ -62,7 +62,7 @@ gulp.task('connect', function() {
   hawtio.setConfig({
     port: 2772,
     staticProxies: [
-    /*  
+    /*
     // proxy to a service, in this case kubernetes
     {
       proto: kube.protocol(),
@@ -84,7 +84,7 @@ gulp.task('connect', function() {
     staticAssets: [{
       path: '/',
       dir: '.'
-   
+
     }],
     fallback: 'index.html',
     liveReload: {
