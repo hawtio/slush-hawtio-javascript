@@ -42,8 +42,7 @@ gulp.task('concat', ['templates'], function() {
 });
 
 gulp.task('clean', ['concat'], function() {
-  return gulp.src('./templates.js', { read: false })
-    .pipe(plugins.clean());
+  return del('./templates.js');
 });
 
 gulp.task('connect', function() {
@@ -62,7 +61,7 @@ gulp.task('connect', function() {
   hawtio.setConfig({
     port: 2772,
     staticProxies: [
-    /*  
+    /*
     // proxy to a service, in this case kubernetes
     {
       proto: kube.protocol(),
@@ -84,7 +83,7 @@ gulp.task('connect', function() {
     staticAssets: [{
       path: '/',
       dir: '.'
-   
+
     }],
     fallback: 'index.html',
     liveReload: {
